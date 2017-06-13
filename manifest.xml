@@ -1,0 +1,17 @@
+<package>
+  <description brief="trinamic_stepper">
+
+     trinamic_stepper
+
+  </description>
+  <author>Nicolas</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/trinamic_stepper</url>
+  
+  <depend package="roscpp"/>
+  <depend package="sensor_msgs"/> 
+
+</package>
+
+

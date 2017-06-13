@@ -1,0 +1,19 @@
+<launch>
+	<remap from="/trinamic_stepper/axis" to="/tplsearch_zwieback/cam_current"/>
+
+    <node pkg="trinamic_stepper" type="trinamic_stepper_node" name="trinamic_stepper" output="screen" launch-prefix="">
+        <param name="serial_port" type="string" value="/dev/trinamic0"/>
+        <param name="baud_rate" type="int" value="9600"/>
+		<param name="acceleration" type="double" value="2" />
+        <param name="position_offset" type="double" value="0.76" />
+		<param name="ap_pulse_div" type="int" value="6" />  <!-- Set to -1 for automatic calculation -->
+		<param name="ap_ramp_div" type="int" value="9" />
+		<param name="ap_microsteps" type="int" value="6" />
+		<param name="ap_current_active" type="int" value="150" />
+		<param name="ap_current_standby" type="int" value="60" />
+		<param name="ap_freewheelingtime" type="int" value="20000" /> <!-- seems to be about *10ms -->
+		<!-- param name="tf_frame_base" type="string" value="/stepper_base"/ -->
+		<!-- param name="tf_frame_axis" type="string" value="/tplsearch_zwieback/cam_current"/ -->
+    </node>
+
+</launch>
